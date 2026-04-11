@@ -47,7 +47,7 @@ build_target() {
 
     # west buildコマンドの構築
     # snippetは -S オプションとして -- の前に配置する必要がある
-    local build_cmd=(west build -s zmk/app -p -d "$build_dir" -b xiao_ble/nrf52840//zmk)
+    local build_cmd=(west build -s zmk/app -p -d "$build_dir" -b xiao_ble/nrf52840/zmk)
 
     # snippetがある場合は --の前に追加
     if [ -n "$snippet" ]; then
