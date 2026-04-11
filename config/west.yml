@@ -10,8 +10,8 @@ manifest:
       url-base: https://github.com/hsgw
     - name: caksoylar  # <-- led
       url-base: https://github.com/caksoylar
-    - name: carrefinho  # <-- Prospector dongle
-      url-base: https://github.com/carrefinho  
+    - name: happy-ryo  # <-- Prospector dongle (fork with bug fix)
+      url-base: https://github.com/happy-ryo
 
   projects:
     # ZMK 本体。公式の app/west.yml を取り込む
@@ -38,16 +38,10 @@ manifest:
       revision: main
 
     # Prospector dongle module (display and adapter)
-    # Using upstream Zephyr 4.1 compatible branch.
-    # Original: https://github.com/carrefinho/prospector-zmk-module
-    # TODO: upstream core/zephyr-4-1 branch still has the 'A' display bug
-    #   (uses "N/A" in battery_bar.c which renders as "A" on display).
-    #   Need to apply fix from happy-ryo/prospector-zmk-module
-    #   fix/battery-bar-display-A-character branch once rebased onto
-    #   core/zephyr-4-1, then switch back to the fork.
+    # Fork with 'A' display bug fix, rebased onto upstream core/zephyr-4-1.
     - name: prospector-zmk-module
-      remote: carrefinho
-      revision: core/zephyr-4-1
+      remote: happy-ryo
+      revision: fix/battery-bar-display-A-character
 
   self:
     path: config
