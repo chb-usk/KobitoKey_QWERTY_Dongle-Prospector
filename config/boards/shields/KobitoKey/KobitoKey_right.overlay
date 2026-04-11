@@ -33,7 +33,7 @@
 
     tb_right: trackball@0 {
         status = "okay";
-        compatible = "pixart,pmw3610";
+        compatible = "pixart,pmw3610-alt";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
@@ -49,4 +49,9 @@
     device = <&tb_right>;
 
     input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
+};
+
+/* CONFIG_NFCT_PINS_AS_GPIOS=y の DTS 移行 (Zephyr 4.1) */
+&uicr {
+    nfct-pins-as-gpios;
 };
