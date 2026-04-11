@@ -38,14 +38,16 @@ manifest:
       revision: main
 
     # Prospector dongle module (display and adapter)
-    # Forked to fix "A" display issue in battery_bar.c
+    # Using upstream Zephyr 4.1 compatible branch.
     # Original: https://github.com/carrefinho/prospector-zmk-module
-    # TODO: Fork needs rebase onto upstream main (5 commits behind).
-    #   upstream still has the 'A' bug (uses "N/A" in battery_bar.c).
-    #   After rebase, cherry-pick the fix onto new branch based on upstream main.
+    # TODO: upstream core/zephyr-4-1 branch still has the 'A' display bug
+    #   (uses "N/A" in battery_bar.c which renders as "A" on display).
+    #   Need to apply fix from happy-ryo/prospector-zmk-module
+    #   fix/battery-bar-display-A-character branch once rebased onto
+    #   core/zephyr-4-1, then switch back to the fork.
     - name: prospector-zmk-module
-      url: https://github.com/happy-ryo/prospector-zmk-module
-      revision: fix/battery-bar-display-A-character
+      remote: carrefinho
+      revision: core/zephyr-4-1
 
   self:
     path: config
