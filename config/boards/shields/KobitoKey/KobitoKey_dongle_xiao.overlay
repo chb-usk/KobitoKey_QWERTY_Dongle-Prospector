@@ -71,7 +71,7 @@
         /* ポインター操作＋自動マウスレイヤー切り替え */
         input-processors =
                 <&sensor_rotation_right>,
-                <&zip_temp_layer 3 5000>;
+                <&zip_temp_layer 6 5000>;
     };
 
     /* 左トラックボール用のセンサー回転 */
@@ -101,13 +101,12 @@
 /* 除外キー位置設定（マウスボタンとモディファイアキー） */
 &zip_temp_layer {
     excluded-positions = <
-        6   /* Right MB1 */
-        7   /* Right MB3 */
-        8   /* Right MB2 */
-        30  /* Left modifier */
-        32  /* Left modifier */
-        33  /* Left modifier */
-        39  /* Right modifier */
+        6
+        7
+        8
+        16
+        17
+        18
     >;
 };
 
