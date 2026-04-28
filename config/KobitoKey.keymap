@@ -1,12 +1,11 @@
+#include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
 
-
- / { 
-        combos {
+/ {
+    combos {
         compatible = "zmk,combos";
 
         combo_eisu {
@@ -20,18 +19,18 @@
             key-positions = <16 17>;
             bindings = <&kp LANG1>;
         };
-        
-         combo_esc {
+
+        combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
 
-         combo_tab {
+        combo_tab {
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&kp TAB>;
-        };        
+        };
     };
 
     macros {
@@ -77,20 +76,20 @@
         default_layer_mac {
             label = "default_layer_mac";
             bindings = <
-&kp Q             &kp W             &kp E                &kp R        &kp T        &kp Y     &kp U        &kp I                     &kp O          &kp P
-&kp A             &kp S             &kp D                &kp F        &kp G        &kp H     &kp J        &kp K                     &kp L          &kp MINUS
-&mt LEFT_SHIFT Z  &kp X             &kp C                &kp V        &kp B        &kp N     &kp M        &kp COMMA                 &kp DOT        &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LEFT_CONTROL  &mt LCMD LANGUAGE_2  &lt 2 SPACE  &lt 3 ENTER  &kp BSPC  &lt 4 ENTER  &mt RIGHT_GUI LANGUAGE_1  &kp RIGHT_ALT  &kp RIGHT_CONTROL
+&kp Q             &kp W             &kp E                    &kp R        &kp T        &kp Y     &kp U        &kp I                     &kp O          &kp P
+&kp A             &kp S             &kp D                    &kp F        &kp G        &kp H     &kp J        &kp K                     &kp L          &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C                    &kp V        &kp B        &kp N     &kp M        &kp COMMA                 &kp DOT        &mt RIGHT_SHIFT SLASH
+&kp TAB           &kp LEFT_CONTROL  &mt LEFT_GUI LANGUAGE_2  &lt 2 SPACE  &lt 3 ENTER  &kp BSPC  &lt 4 ENTER  &mt RIGHT_GUI LANGUAGE_1  &kp RIGHT_ALT  &kp RIGHT_CONTROL
             >;
         };
 
         default_layer_win {
             label = "default_layer_win";
             bindings = <
-&kp Q             &kp W         &kp E                        &kp R        &kp T        &kp Y     &kp U        &kp I                             &kp O          &mt DELETE P
-&kp A             &kp S         &kp D                        &kp F        &kp G        &kp H     &kp J        &kp K                             &kp L          &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C                        &kp V        &kp B        &kp N     &kp M        &kp COMMA                         &kp DOT        &mt RIGHT_SHIFT SLASH
-&kp TAB           &kp LEFT_ALT  &mt LEFT_CONTROL LANGUAGE_2  &lt 2 SPACE  &lt 3 ENTER  &kp BSPC  &lt 4 ENTER  &mt LS(RIGHT_CONTROL) LANGUAGE_1  &kp RIGHT_WIN  &kp RIGHT_ALT
+&kp Q             &kp W         &kp E                        &kp R        &kp T        &kp Y     &kp U        &kp I                         &kp O          &mt DELETE P
+&kp A             &kp S         &kp D                        &kp F        &kp G        &kp H     &kp J        &kp K                         &kp L          &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C                        &kp V        &kp B        &kp N     &kp M        &kp COMMA                     &kp DOT        &mt RIGHT_SHIFT SLASH
+&kp TAB           &kp LEFT_ALT  &mt LEFT_CONTROL LANGUAGE_2  &lt 2 SPACE  &lt 3 ENTER  &kp BSPC  &lt 4 ENTER  &mt RIGHT_CONTROL LANGUAGE_1  &kp RIGHT_WIN  &kp RIGHT_ALT
             >;
         };
 
