@@ -74,7 +74,7 @@
         compatible = "zmk,keymap";
 
         default_layer_mac {
-            label = "default_layer_mac";
+            label = "Mac";
             bindings = <
 &kp Q             &kp W             &kp E                    &kp R        &kp T        &kp Y     &kp U        &kp I                     &kp O          &kp P
 &kp A             &kp S             &kp D                    &kp F        &kp G        &kp H     &kp J        &kp K                     &kp L          &kp MINUS
@@ -84,7 +84,7 @@
         };
 
         default_layer_win {
-            label = "default_layer_win";
+            label = "Win";
             bindings = <
 &kp Q             &kp W         &kp E                        &kp R        &kp T        &kp Y     &kp U        &kp I                         &kp O          &mt DELETE P
 &kp A             &kp S         &kp D                        &kp F        &kp G        &kp H     &kp J        &kp K                         &kp L          &kp MINUS
