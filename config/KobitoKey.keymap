@@ -136,10 +136,10 @@
         MOUSE {
             label = "MOUSE";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &kp LA(LEFT)   &mkp MB1      &mkp MB3  &mkp MB2       &kp PAGE_UP
-&trans  &trans  &trans  &trans  &trans  &kp LA(RIGHT)  &mkp MB1      &mkp MB3  &mkp MB2       &kp PAGE_DOWN
-&trans  &trans  &trans  &trans  &trans  &trans         &kp LA(LEFT)  &trans    &kp LA(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans        &trans    &trans         &trans
+&trans          &trans  &trans            &trans  &trans  &kp LA(LEFT)   &mkp MB1      &mkp MB3           &mkp MB2       &kp PAGE_UP
+&trans          &trans  &trans            &trans  &trans  &kp LA(RIGHT)  &mkp MB1      &mkp MB3           &mkp MB2       &kp PAGE_DOWN
+&kp LEFT_SHIFT  &trans  &trans            &trans  &trans  &trans         &kp LA(LEFT)  &trans             &kp LA(RIGHT)  &kp RIGHT_SHIFT
+&trans          &trans  &kp LEFT_CONTROL  &trans  &trans  &trans         &trans        &kp RIGHT_CONTROL  &trans         &trans
             >;
         };
     };
